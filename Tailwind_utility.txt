@@ -1,0 +1,8 @@
+left-1/2 -translate-x-1/2    TO CENTER A DIV
+
+whitespace-nowrap     TO MAKE A SINGLE LINE
+truncate w-32         TO CUT A LONG MESSAGE like helo sd...
+
+max-w-xs    TO MAKE TEXT CENTER AT THE SAMETIME MAKES THE NEWLINE START TO THE LRFT
+
+

@@ -1,0 +1,43 @@
+MY NOTES
+
+NAMING CONVENTION
+a. kebab-case   file-name
+b. snake-case   file_name 
+c. PascalCae    FilenName
+d. camelCase    fileName
+
+
+• The asterisk "*" usually represents all or zero or more of something.
+
+
+• Method to link a.js to b.js 
+   1.require() CommonJS, traditional
+   a.js
+    module.exports = {
+        key: "1234",
+        pass: "34443"
+    }
+
+    b.js 
+     const config = require("./a") //not require ext
+     console.log(config.key)
+
+
+    2. Import ES modules
+     a.js  export const key = 1234
+     b.js  import { key } from "./a.js"  //require .js ext
+
+     Note: Say you have a lot of var or function you want to import from the same script
+     You can import all by using 
+     import * as name from "./a.js" 
+     to access it individually, just ff.name   //name of function or variable
+
+
+
+ • Standard animation delay for modal is 250-300 ms.
+
+ • Splice() changes the original array, use to add/remove elements
+ • Slice()  get a portion without changing the original array.
+
+• dot notation      .   user.name    when you know the property name
+• bracket notation []   user[prop]   when the name is variable and dyanmic, properties has spaces, dashes or start with numbe

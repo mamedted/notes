@@ -1,0 +1,38 @@
+1.DOWNLOAD THIS FILE FROM THIS URL
+https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-windows-amd64.exe
+
+2.RENAME THE FILE INTO mkcert.exe and put it on, say dekstop
+
+3.OPEN CMD, NAVIGATE TO DESKTOP FOLDER
+cd desktop
+
+4.RUN THE FOLLOWING
+	
+   mkcert -install
+   mkcert 192.168.1.245 localhost 127.0.0.1
+
+5.IT CREATES TWO FILES ON YOUR DEKSTOP
+   192.168.1.245+2.pem
+   192.168.1.245+2-key.pem
+
+6.EDIT THE XAMPP/APACHE/CONF/EXTRA/httpd-ssl.conf
+
+Mandatory: Search for server.crt, if any of it is not commented, add # in the first line.Because the browser loaded it when not commented.
+Now, update the 
+
+SSLCertificateFile "C:/Users/Lenovo_PC/Desktop/192.168.1.245+2.pem"
+SSLCertificateKeyFile  "C:/Users/Lenovo_PC/Desktop/192.168.1.245+2-key.pem"
+
+ 7.RESTART APACHE
+
+ 8.IN CMD, run again
+ CD desktop
+ mkcert -install
+
+ It will say something like "THE LOCAL CA IS NOW INSTALLED IN THE SYSTEM TRUST STORE.
+ it will create automatically a file name mkcert-root.pem or root.pem
+
+ Copy this file (not the key) into your phone and install it as CA. AND BOOM! IT WORKS LIKE MAGIC
+
+
+

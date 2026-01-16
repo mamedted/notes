@@ -1,0 +1,12 @@
+@echo off
+echo Starting frontend and backend...
+
+:: Frontend
+start cmd /k "cd frontend && npm run dev"
+
+:: Backend
+start cmd /k "cd backend && nodemon server.js"
+
+echo All servers started.
+
+save it as name.bat

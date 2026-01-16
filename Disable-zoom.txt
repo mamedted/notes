@@ -1,0 +1,11 @@
+In the meta content:
+add
+
+"..., maximu-scale=1.0, user-scalable=no"
+
+
+Then in the css
+#root, body{
+touch-action: pan-x pan-y
+
+THAT'S IT!!!

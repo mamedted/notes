@@ -1,0 +1,13 @@
+//TO MAKE NEW UPDATES
+setSelectedFiles((prev) => [...prev, ...Array.from(e.target.files)]);
+
+
+**USE CONTEXT IS JUST FOR 
+Auth
+Theme
+Language
+Global user info
+
+**IN A NUMBER INPUT, IT SHOULD BE type="text" inputMode="numeric"
+
+**TO USE INLINE STYLE style={{color:"red", border:"1px solid red"}}

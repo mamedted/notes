@@ -1,0 +1,28 @@
+1. TO INSTALL MONGODO, search MONGODB in google and click the Offical Page
+2. Go to Products menu
+3.Choose Community Edition
+4.In communty edition page, click download
+5.Scroll down, you will see current version, widnows and msi. Click download
+
+
+INSTALLATION SETUP
+1. RUN and click Next
+2.Check the License Agreement and click  next
+3.Go for Complete version
+4.Keep everything at is but dont include/install mongodb compass
+5.Click next and wait for the instattion process to complete
+6.Just click finish when done
+7.Add the path to the system path, to do this
+C:\Program Files\MongoDB\Server\8.2\bin copy this 
+
+8.Go to edit enviroment variable, under System variabless, doublick path, then click new then paste the path
+
+
+NEXT INSTALL MONGODB SHELL
+
+Just search mongodb shell and hit download
+download MSI version
+
+then uncheck the box then install
+
+After everthing, go to cmd and run mongod --version and see it was properly installed

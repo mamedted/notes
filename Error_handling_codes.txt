@@ -1,0 +1,22 @@
+HTTP STATUS CODES
+
+1xx  INFORMATIOAL  = hang on, working on it
+2xx  success = everything is fine
+3xx  redirection = go to ther other link instead
+4xx  client error = you the user made a mistake
+5xx  server error  = the request was fine, but my server is failing internal
+
+200 OK
+201 CREATED
+
+
+400 bad request
+401 Unathorized   you forgot to login
+403 forbidden   server knows who you are, but you dont have permission to see it
+404 not found  you are looking for a page orm database that does not exist
+429 too many request
+
+
+500 Internal server error
+502 bad gateaway  one server tried to talk to another server and got no response
+503 service unavailable    the server is overloaded or down for maintenance

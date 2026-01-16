@@ -1,0 +1,11 @@
+SETUP
+
+1. npm install prisma@5 --save-dev
+2. npm install @prisma/client@5
+3.npx prisma init
+
+4.Inside the .env file, update the DATABASE_URL
+5.Inside the prisma/schema.prisma, update the provider based on database type like "mysql, postgress, etc
+6.Inside of it also add your model 
+7.After creating your model, run 
+npx prisma migrate dev --name init   //now check it is sycn in your database

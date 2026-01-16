@@ -1,0 +1,96 @@
+EXPRESS NOTE
+
+
+
+**BASIC STRUCTURE**
+
+const express = require("express");
+const app = express();
+
+app.listen(4000, () => {
+  console.log("Running in port 4000");
+});
+
+
+
+//TO RECEIVE PARSE DATA THRU ROUTES//
+app.post("/api", (req, res) => {
+    
+    req.body  //for json text
+    req.body.key //to acess the specifc key
+
+    req.query //to catch the data send thru parameter
+    req.query.name  //to access it name
+
+
+    req.file  //for object like files
+
+})
+
+
+
+//FILE SYSTEM METHODS//
+ 
+ fs.readdirSync(path.join(__dirname, "foldername"))   //to access contents of specific folder
+
+//to read it
+ fs.readFileSync("filename.ext")  
+
+ to delete file, requires fallback
+ fs.unlink('filepath', (err) => {
+        if (err) {
+      if (err.code === "ENOENT") {
+        return res.status(404).json({ error: "Not found" });
+      }
+      console.log("Error to delete");
+    }
+ })
+
+
+
+**TO MAKE THE CONNECTION HTTPS**
+
+const https = require('https')
+const express = require("express");
+const app = express();
+const fs = require('fs')  //FS stands for File System
+
+const options = {
+    key: fs.readFileSync("localhost-key.pem"),  //rename the 192.168 generate by mkcert for consistency 
+    cert: fs.readFileSync("localhost.pem")      ///same here
+}
+
+https.createServer(options, app).listen(4000, () => {
+  console.log("Running in port 4000");
+});
+
+
+
+** TO USE DOTENV **
+
+1.npm install dotenv, 
+2. In .env, you set name = value e.g pass = "1234"
+3.import it server.js by
+ require("dotenv").config();
+4. To access it process.env.name
+
+
+**TO INSTALL VITE PWA**
+
+npm install vite-plugin-pwa --save-dev
+
+
+
+**TO USE CORS **
+
+CORS use when the origin of frontend and backend is different, like
+frontend running on port 5173 while backend in running on port 4000
+
+1. To install cors, npm install cors
+   const cors = require("cors")
+   app.use(cors())
+
+2.To communicate the frontend and backend
+frontend: fetch("http://192.168.1.245:4000/send)
+backend: app.post("/send")
+

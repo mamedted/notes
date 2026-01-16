@@ -1,0 +1,19 @@
+1. INSTALL GIT
+
+2.RUN git --version or git to see if its properly installed.
+
+3. login first by running:
+  git config --global user.email "mamextech@gmail.com"
+  git config --global user.name "mamextech"
+
+4. To track specific file: git add name.js   //to track all git add .
+
+5. To see changes: git status
+
+6.To commit: git commit -m "just description say version1"
+
+7. To see history version: git log
+
+8. To untrack file: git rm --cached index.js
+
+9.To ignore specific files: createa .gitignore file the

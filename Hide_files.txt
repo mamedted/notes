@@ -1,0 +1,9 @@
+1. CREATE .vscode folder in the root folder
+2. Inside it create setting.json file
+    
+	{	
+	 "files.exclude": {
+         "**/node_modules": true,
+	
+	}
+	

@@ -1,0 +1,15 @@
+1. TO INSER 
+  await db.collection("cn").insertOne(req.body)     //directly insert
+
+
+
+2.TO READ/FIND IF FILE EXIST
+
+let user = db.collection("cn").findOne({username: email})
+
+OR
+
+let user = db.collection("cn").findOne({username}) //SAME AS username: username
+
+user.password    //to access specific key
+   

@@ -1,0 +1,6 @@
+1. TO FORCE IT MY NOT MAKING A NEWLINE
+ create a file name .prettierrc in the root folder. Then add;
+
+{
+"printWidth": 200  //depende sayo
+}
