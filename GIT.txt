@@ -2,6 +2,17 @@
 
 2.RUN git --version or git to see if its properly installed.
 
+AFTER CREATING A NEW REPO
+
+3. run: git init
+4. git add . 
+5. git commit -m "first commit"
+6. git branch -M main
+7.git remote add origin git@github.com:mamedted/notes.git
+8. git push -u origin main
+
+
+
 3. login first by running:
   git config --global user.email "mamextech@gmail.com"
   git config --global user.name "mamextech"
