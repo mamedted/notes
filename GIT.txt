@@ -2,7 +2,14 @@
 
 2.RUN git --version or git to see if its properly installed.
 
-AFTER CREATING A NEW REPO
+3. CREATE A NEW REPO. ONE REPO PER PROJECT. CHOOSE SSH
+
+4. LINK YOUR machine by generating a key. 
+   Open Git Bash Here from Desktop and run:
+   ssh-keygen -t ed25519 -C "mamedtedrasul20@gmail.com" //if sucesss, hit enter as long as you can
+   look for filename id_rsa.pub   //open it and copy all
+   Go to github > settings > SSH and GPG Keys > New SSH key > Title: your machine > key: paste here
+
 
 3. run: git init
 4. git add . 
@@ -11,6 +18,21 @@ AFTER CREATING A NEW REPO
 7.git remote add origin git@github.com:mamedted/notes.git
 8. git push -u origin main
 
+
+
+**TO PULL YOUR REPO FROM A DIFFERENT MACHINE OR FOLDER**
+  git clone git@github.com:mamedted/reponame.git
+
+**IF THERE IS ANY CHANGES AND YOU WANT TO UPLOAD/FETCH IT just run:
+git push
+git pull
+
+
+**IF YOU JUST CHANGES TO A FILE, YOU DIDN'T CREATE A NEW FILE" just
+
+   git commit -am 'text'
+   
+ //a stans for add and m is message
 
 
 
