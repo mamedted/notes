@@ -1,0 +1,31 @@
+IF YOU ARE USING VITE FRONTEND
+
+ * npm install dotenv
+ * create a .dotenv file the root folder of frontend
+ * Inside .dotenv, always start with VITE_
+   
+   VITE_API_URL = "192.168.1.186"
+
+ *To import it in a component: 
+  const api = import.meta.env.VITE_API_URL
+
+ * To use it, just call api
+
+
+FROM BACKEND
+
+npm install dotenv in the root folder of backend
+create .env
+pass = "1234"
+
+To import it
+require("dotenv").config()
+
+To use it
+process.env.pass
+
+
+
+
+   
+ 
