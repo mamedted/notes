@@ -1,0 +1,4 @@
+1. TO CREATE A .bat file that direclty opens a sepcific directory
+
+@echo off
+cd /d "path" cmd /k
