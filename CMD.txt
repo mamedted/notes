@@ -7,5 +7,6 @@ cd /d "path" cmd /k
 2.TO DIRECTLY open the cmd from folder
  
 @echo off
-cd /d "path" code .
+cd /d "path" 
+code .
 
