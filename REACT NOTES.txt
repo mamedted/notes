@@ -11,3 +11,7 @@ Global user info
 **IN A NUMBER INPUT, IT SHOULD BE type="text" inputMode="numeric"
 
 **TO USE INLINE STYLE style={{color:"red", border:"1px solid red"}}
+
+**WHEN SENDING JSON, use   headers: { "Content-Type": "application/json" },	
+
+**WHEN SENDING FORMDATA, don't use headers

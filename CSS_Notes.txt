@@ -1,0 +1,9 @@
+1. If you want to make an element exactly at the left, right, bottom, or left withou using position absolute. Do this insted
+  *Make sure you parent element display is flex and flex-direction column
+  *To push an element at the very bottom. mt-auto  //margin-top:auto
+  *Tp push on the right ml-auto
+
+2.If you already set a padding to parent container and you dont want specific element affected by this. 
+  Say, you dont your element affected by horizontal padding, do this;
+
+  margin-left: -8px //assuming 8px is what set in the parent element

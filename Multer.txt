@@ -1,0 +1,17 @@
+1. TO USE IT, npm install multer   //this is for metadata like picture/video files
+
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "dp/");       //CREATE A FOLDER inside backend
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage });
+
+app.post("/api", upload.single("name"))   //TO UPLOAD SINGLE FILE
+app.post("/api", upload.array("files[]"))   //TO UPLOAD SINGLE FILE
