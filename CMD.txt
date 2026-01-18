@@ -10,3 +10,7 @@ cd /d "path" cmd /k
 cd /d "path" 
 code .
 
+
+3.TO make it non-blocking, that let the proceeding run, just do:
+ start "" code .
+
