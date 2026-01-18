@@ -24,6 +24,16 @@ require("dotenv").config()
 To use it
 process.env.pass
 
+NOTE:
+Environment variables are case-sensitive by convention
+Lowercase names like key and cert are easy to confuse
+Spaces around = are risky
+
+CORRECT WAY
+
+SSL_CERT=C:/Users/Administrator/mkcert/CERT.pem
+SSL_KEY=C:/Users/Administrator/mkcert/KEY.pem
+
 
 
    
