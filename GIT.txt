@@ -1,29 +1,9 @@
 1. INSTALL GIT
 
-2. RUN git -v or git --version to see if its properly installed.
+2.RUN git --version or git to see if its properly installed.
 
-3. CREATE A NEW REPO FROM GITHUB. ONE REPO PER PROJECT. Choose SSH connection
+AFTER CREATING A NEW REPO
 
-3. In cmd, login first by running the following. Only one time setup
-  git config --global user.email "mamedtedrasul20@gmail.com"
-  git config --global user.name "mamedted"
-
-
-4.ASSOCIATE/LINK YOUR DESKTOP. DO THE FF;
-  open Git Bash here and run:
-  ssh-keygen -t ed25519 -C "mamedtedrasul20@gmail.com"    
- //it will generate a key, just hint enter three+ times. Find the folder .ssh folder and look for id_rsa.pub file. 
- //Open it and copy the entire content "starting from sshkey-gen and ending with your email".
- //Paste it in github settings. click SSH and GPG  keys, click New SSH key.
- Input title: your-machine-name  //lenovo
- Dont modify the keytype
- Keybox: paste it here  
- Hit  Click add
- 
-  
-
-
-After creating a repo and you wan to push your project in github, go to your project root folder;
 3. run: git init
 4. git add . 
 5. git commit -m "first commit"
@@ -32,18 +12,12 @@ After creating a repo and you wan to push your project in github, go to your pro
 8. git push -u origin main
 
 
-To track changes, always run git status
-to stage every changes, just run: git add . then git commit -m 'descibe'
-
-If you already made a connection: if you want to push and pull; just
-git push 
-git pull
 
 
-TO PULL OF THE FIRST TIME
-  git clone git@github.com:mamedted/reponame.git
 
-
+3. login first by running:
+  git config --global user.email "mamextech@gmail.com"
+  git config --global user.name "mamextech"
 
 4. To track specific file: git add name.js   //to track all git add .
 
@@ -61,22 +35,6 @@ TO PULL OF THE FIRST TIME
 **TO PUT YOUR  LOCAL PROJECT IN GITHUB**
 1. In your project root folder, run git init  //it will create a .git folder, check it if its created.
 2. Since you are working with frontend and backend, create a single .gitignore in the root folder.
-3. After staging and commit and pushing it, you can pull it from other machine. Just run npm install in frontend and backend separately.
 
 **WHAT SHOULD BE INSIDE .gitignore FILE**
 
-   node_modules/
-   
-   .env
-   .env.local
-   .env.development.local
-   .env.test.local
-   .env.production.local
-    **/.env
-
-   dist/
-   build/
-   out/
-   .next/
-  
- *.log
