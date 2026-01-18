@@ -27,13 +27,7 @@ connectDB();
 
 
 
-
-
-
-
-
-
-1. TO INSER 
+1. TO INSERT
   await db.collection("cn").insertOne(req.body)     //directly insert
 
 
