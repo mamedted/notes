@@ -1,3 +1,38 @@
+TWO DRIVER
+1. MongoClient //OLD WAY, directly save to mongodb, no neeed schema
+
+const { MongoClient } = require("mongodb");
+const url = "mongodb://127.0.0.1:27017";
+let db;
+
+async function connectDB() {
+let client = await MongoClient.connect(url);
+db = client.db("facebook");
+console.log("connected");
+}
+
+connectDB()
+
+
+2.Mongoose
+const mongoose = require("mongoose");
+
+async function connectDB() {
+  let client = await mongoose.connect(url + "/facebook");
+  console.log("connected");
+}
+
+connectDB();
+
+
+
+
+
+
+
+
+
+
 1. TO INSER 
   await db.collection("cn").insertOne(req.body)     //directly insert
 
