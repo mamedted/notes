@@ -94,3 +94,17 @@ frontend running on port 5173 while backend in running on port 4000
 frontend: fetch("http://192.168.1.245:4000/send)
 backend: app.post("/send")
 
+
+**TO HASHED PASSWORD**
+npm install bcryptjs
+
+const bcrypt = require("bcryptjs");
+
+TRICKY PART because you can no longer do insertOne(req.body), so you need to destructure thr object
+
+const {email, password, ...rest}
+const hashedPassword = await bcrypt.hash(password, 10);
+
+const newUser = new User({email, passwrod: hashedPassword, ...rest})
+await newUser.save()
+

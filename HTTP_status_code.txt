@@ -8,12 +8,14 @@ HTTP STATUS CODES
 
 200 OK
 201 CREATED
+202 PENDING
 
 
 400 bad request
 401 Unathorized   you forgot to login
 403 forbidden   server knows who you are, but you dont have permission to see it
 404 not found  you are looking for a page orm database that does not exist
+409 Already exist, conflict
 429 too many request
 
 
