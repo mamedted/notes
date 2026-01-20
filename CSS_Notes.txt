@@ -7,3 +7,7 @@
   Say, you dont your element affected by horizontal padding, do this;
 
   margin-left: -8px //assuming 8px is what set in the parent element
+
+
+3.If you have a loader spinner and you want to stop and remove the animation when certain condition is met, just do:
+ name.style.animation = "none"
