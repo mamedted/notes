@@ -1,0 +1,90 @@
+FRONTEND
+
+import { useNavigate } from "react-router-dom";
+
+export function Page1() {
+  const nav = useNavigate();
+  return (
+    <>
+      <h1 className="text-[30px] font-bold">Create an account</h1>
+      <button
+        className="mb-2"
+        onClick={() => {
+          fetch("http://192.168.1.186:4000/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify({ api: "login" })
+          });
+          // .then((res) => res.text())
+          // .then((data) => console.log(data));
+        }}
+      >
+        LOGIN
+      </button>
+      <button
+        onClick={() => {
+          fetch("http://192.168.1.186:4000/setdp", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify({ api: "setdp" })
+          });
+          // .then((res) => res.text())
+          // .then((data) => console.log(data));
+        }}
+      >
+        SETDP
+      </button>
+    </>
+  );
+}
+
+
+BACKEND
+
+const express = require("express");
+const cors = require("cors");
+const session = require("express-session");
+const app = express();
+const PORT = 4000;
+
+app.use(
+  session({
+    name: "sid", // cookie name (optional)
+    secret: "super-secret-key", // 🔐 must be hidden in env
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: false, // true ONLY in HTTPS
+      maxAge: 1000 * 60 * 60 * 24 // 1 day
+    }
+  })
+);
+
+app.use(
+  cors({
+    origin: "http://192.168.1.186:5173", // Replace with your frontend URL
+    credentials: true
+  })
+);
+app.use(express.json());
+
+app.post("/login", (req, res) => {
+  req.session.api = "Rasul";
+  console.log(req.body);
+  console.log(req.session.api);
+  res.send("login");
+});
+
+app.post("/setdp", (req, res) => {
+  console.log(req.body);
+  console.log(req.session.api);
+  res.send("setdp");
+});
+
+app.listen(PORT, () => {
+  console.log("RUNNING ON PORT" + PORT);
+});
+
