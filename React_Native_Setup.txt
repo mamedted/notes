@@ -1,0 +1,48 @@
+USING EXPO
+
+1. RUN in cmd: npx create-expo-app@latest myFirstApp
+
+2. cd myFirstApp
+
+3.To start compiling and viewing from mobile, run: npx expo start
+
+4. It will generate a QRC Code. To open, scan it by downloading Expo Go app from playstore.
+
+5. TO RESET THE TEMPLATE, run: npm run reset-project
+
+6. TO HIDE THE UPPER HEADER/TAB: go to _layout.tsx and incorporate this:
+export default function RootLayout() {
+  return <Stack screenOptions={{ headerShown: false }}></Stack>;
+}
+
+
+
+My account in Expo Go app:
+email: mamedtedrasul20@gmail.com
+username: Mamedted1998
+
+
+Delete all the content of Index.tsx
+
+import { View, Text, StyleSheet } from "react-native";
+
+export default function Index() {
+  // You must add the return statement here!
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Hello world</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, // This ensures the view fills the screen
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title: {
+    color: "red",
+    fontSize: 20,
+  },
+});
