@@ -23,6 +23,11 @@
 **TO PULL YOUR REPO FROM A DIFFERENT MACHINE OR FOLDER**
   git clone git@github.com:mamedted/reponame.git
 
+**TO UNTRACKED A FILE ALREADY PUSH INTO GITHUB**
+git rm --cached filename.ext
+git commit -m "untracked filename"
+git push
+
 **IF THERE IS ANY CHANGES AND YOU WANT TO UPLOAD/FETCH IT just run:
 git push
 git pull
