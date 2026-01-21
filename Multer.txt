@@ -15,3 +15,7 @@ const upload = multer({ storage });
 
 app.post("/api", upload.single("name"))   //TO UPLOAD SINGLE FILE
 app.post("/api", upload.array("files[]"))   //TO UPLOAD SINGLE FILE
+
+
+** to access picture filename
+ req.file.originalname
