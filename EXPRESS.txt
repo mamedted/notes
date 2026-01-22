@@ -69,10 +69,12 @@ https.createServer(options, app).listen(4000, () => {
 ** TO USE DOTENV **
 
 1.npm install dotenv, 
-2. In .env, you set name = value e.g pass = "1234"
+2. In .env, you set NAME=value e.g PASS="1234"  //SHOULD BE CAPSLOCK AND WITHOUT SPACE
 3.import it server.js by
  require("dotenv").config();
 4. To access it process.env.name
+
+
 
 
 **TO INSTALL VITE PWA**
@@ -88,11 +90,45 @@ frontend running on port 5173 while backend in running on port 4000
 
 1. To install cors, npm install cors
    const cors = require("cors")
-   app.use(cors())
+   app.use(cors({
+    origin: "https://192.168.1.245:5173",
+    credentials" true
+}))
 
 2.To communicate the frontend and backend
 frontend: fetch("http://192.168.1.245:4000/send)
 backend: app.post("/send")
+
+
+
+
+
+** TO USE EXPRESS-SESSION**
+nmp install express-session
+
+const session = require("express-session");
+
+app.use(
+  session({
+    name: "sid", // cookie name (optional)
+    secret: "super-secret-key", // 🔐 must be hidden in env
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: true, // true ONLY in HTTPS
+      maxAge: 1000 * 60 * 60 * 24, // 1 day
+    },
+  }),
+);
+
+to save into session
+req.session.userId = user._id
+req.session.firstname = firstname
+
+
+
+
 
 
 **TO HASHED PASSWORD**
