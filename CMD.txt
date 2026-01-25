@@ -1,7 +1,47 @@
+
+   -------.bat ----------
+  -batch file, is a script to automate tasks
+
+  Normally, if you click the bat file, it open and closes instnantly, so you need the following,
+
+  📍 @echo off -- to see only the result
+  📍 /k  -- to keep cmd open, very crucial
+  📍 /d -- allow changing of drive letters
+  📍 pause -- to puase it until user click a key and automacially closes
+  📍start cmd -- open another cmd window
+
+  📍timeout /t 5    --to add delay, 5 sec
+  📍timeout /t 5 > nul   --hide countdown text
+  📍timeout /t 5 /nobreak > nul   -ignore key press and hide text
+
+  📍echo Starting   --to show text
+
+
+📍 A .bat FILE that opens cmd: 
+  @echo off
+  start cmd 
+
+  📍 Open multine cmd windows
+  @echo off
+  start cmd
+  start cmd
+
+📍 OPENS CMD IN A SPECIFIC FOLDER
+  start cmd /k "cd /d C:\Users\Lenovo_PC\Desktop\PROJECTS\FB-REACT"
+
+
+
+
+
+
+
 1. TO CREATE A .bat file that direclty opens a sepcific directory
 
 @echo off
 cd /d "path" cmd /k
+
+//sample
+cd /d "G:\PROJECTS\FACEBOOK\FB-REACT
 
 
 2.TO DIRECTLY open the cmd from folder

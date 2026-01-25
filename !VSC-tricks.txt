@@ -1,0 +1,55 @@
+
+📍 TO ASSIGN A SPECIFIC KEY TO DIRECTLY OPEN A SPECIFIC FILE, WORKS EVERYWHERE
+
+   🖊 Hit Ctrl + Shift + P 
+   🖊 Enter: Open Keyboard Shortcuts (JSON) and hit ENTER
+
+   [
+    {
+        "key": "f1",
+        "command":"vscode.open",
+        "args": "file:///C:/xampp/htdocs/Mamedev/notes/notes/Atlas.html",  //change the file path
+
+    
+   }
+   ]
+
+--------------------------------------------------------------
+
+📍 TO INCLUDE A SPECFIC FOLDER INTO YOUR PROJECT FOLDER'S SIDEBAR WITHOUT ACTUALLY MOVING THAT FOLDER
+
+  🖊 Click 'File' and hit "Add folder to workspace"  //Locate the folder you want to add/
+
+---------------------------------------------------------------
+
+
+📍 TO HIDE FILES IN THE FILE EXPLORER 
+
+  🖊 Create a folder named ".vscode" in the root folder.
+  🖊 Inside that folder, create a file named "settings.json".
+
+
+  {
+     "files.exclude": {
+    "**/node_modules": true,   //directory
+    "**/index.html": true,    //specific file
+    "**/*.pem": true,         //All files with the specific ext
+
+    }
+  }
+
+📍 TO INCLUDE HIDDEN FILES IN THE QUICK OPEN SEARCH
+
+  {
+     "files.exclude": {
+      "**/node_modules": true,   //directory
+    },
+     "search.exclude": {
+      "**/App.jsx": false,   //add files here and set it to false
+  }
+  }
+
+
+
+
+

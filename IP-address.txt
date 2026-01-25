@@ -1,0 +1,10 @@
+Normally, if you connect to different router and you reconnect to your
+old router, the IP address changes.
+
+To make an IP address fix
+
+1. Login to your WIFI router admin page
+2. find DHCP 
+3. look for reservation/binding
+4. Enter the IP address you want to set and MAC address of your LAPTOP
+5. Save it and reconnect your laptop
