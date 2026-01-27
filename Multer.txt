@@ -1,3 +1,19 @@
+ Multer is for receiving multipart data from frontend
+that contains files e.g., media, image, video, text, etc
+if you send a data from frontend using formdata, dont use headers
+
+Minimal setup for just receving text
+
+const multer = require('multer')
+const upload = multer()
+
+app.post("/api", upload.none(), (req, res) => {})
+
+
+
+
+BELOW IS THE SETUP FOR UPLOADING FILES
+
 1. TO USE IT, npm install multer   //this is for metadata like picture/video files
 
 const multer = require("multer");
