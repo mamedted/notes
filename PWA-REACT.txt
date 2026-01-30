@@ -22,8 +22,8 @@ export default defineConfig({
         name: "My React PWA",
         short_name: "ReactPWA",
         description: "My Vite React Progressive Web App",
-        theme_color: "#ffffff",
-        background_color: "#ffffff",
+        theme_color: "#ffffff",  //top notch color
+        background_color: "#ffffff",  //splash screen bg color
         display: "standalone",
         start_url: "/",
         icons: [
