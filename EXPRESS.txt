@@ -1,5 +1,24 @@
 EXPRESS NOTE
 
+By default it uses commonJS (syntax: const express = require("express");  module.exports = routes;)
+
+if you want to use ESModule (modern, syntax: import express from "express";   export default routes;)
+and from package json, locate the type key and change the value from commonJS to module
+
+
+If you are exporting one function use
+export default functioname(){} 
+to import it, 
+import whatevername from "./.."
+
+
+If you exporting multiple functions, eg. utils and db model
+
+export const name1 () => {}
+export const name2 () => {}
+
+import {name1, name2} from "./../"  //name mus match the export name
+
 
 
 **BASIC STRUCTURE**
