@@ -166,3 +166,34 @@ await newUser.save()
 IN LOGIN
   const isMatch = await bcrypt.compare(password, user.password);
 
+
+
+**Session expire when the server restart**
+To make it survive:
+   
+  npm install connect-mongo
+
+  import MongoStore from "connect-mongo"
+
+
+  //Redefine your mongoose setup, more clean//
+  
+    const DB_URL = "mongodb://127.0.0.1:27017/facebook";
+ 
+     mongoose.connect(DB_URL)
+     .then(() => console.log("MongoDB Connected"))
+     .catch(err => console.error("Conn Error:", err));
+
+
+
+  In the app.use(session({}))
+    insert the following under the key
+
+    saveUninitialized: false
+  //  here//
+   store: MongoStore.create({
+      mongoUrl: DB_URL, // Explicitly link the store to your DB
+      autoRemove: "interval",
+      autoRemoveInterval: 10,
+    }),
+
