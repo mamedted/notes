@@ -15,3 +15,17 @@ Global user info
 **WHEN SENDING JSON, use   headers: { "Content-Type": "application/json" },	
 
 **WHEN SENDING FORMDATA, don't use headers
+
+
+
+**IF YOU WANT TO TRIGGER THE RE-RENDER OF A COMPONENT IN THE PARENT COMPONENT **
+Say, you have a fetch function in the parent container and you want to trigger it
+pass the fetch function as props in the child component
+
+<Child onRefresh={fetch} />
+
+Then, in your child component
+{onRefresh}
+
+Just trigger the function after clicking a button
+onRefresh()

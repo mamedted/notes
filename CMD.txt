@@ -54,3 +54,13 @@ code .
 3.TO make it non-blocking, that let the proceeding run, just do:
  start "" code .
 
+
+
+2. TO OPEN A BROWSER AUTOMATICALLY
+  
+ start chrome
+
+ with specific page open :start chrome "https://facebook.com"
+
+ with two spearate page open in different tab/windows  :start chrome "https://page1.com" "https://page2.com"
+  

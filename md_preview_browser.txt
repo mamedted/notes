@@ -1,0 +1,7 @@
+TO VIEW MD FILES IN CHROME BROSWER
+
+from chrome, install Markdown Viewer Extension
+
+Go to extension, markdown viewer and turn on: ALLOW ACCESS TO URLs
+
+reload the md files now.
