@@ -26,3 +26,8 @@ download MSI version
 then uncheck the box then install
 
 After everthing, go to cmd and run mongod --version and see it was properly installed
+
+
+
+NOTE! IF YOU ARE USING OLD MACHINES LIKE MY LENOVO AND HP PC, install Mongodb version 8.0 lower .
+

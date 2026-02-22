@@ -1,0 +1,49 @@
+**IT SHOULD BE SAVE INSIDE src/store/ **
+
+NAMING: useMyData.js
+
+FORMAT: 
+import { create } from "zustand";
+
+export const useMyData = create((set) => ({
+firstname: ""    /for string
+mydata: [],      /for array
+
+setMyData: (value) => set({ firstname: value }),
+setMyData: (value) => set({ firstname: value }),
+}));
+
+
+IMPORT AND USAGE:
+
+import { useMyData } from "./../store/useMyData.js"
+const { firstname } = useMyData();    //for string
+
+
+ const { mydata } = useMyData();              //for object
+ const {firstname, lastname, DP} = myData     //destructure
+
+ const { id, firstname, lastname, DP } = useMyData((s) => s.mydata || {});    //if you want to make it one line
+
+
+
+
+**WITH PERSIST, MEANING SAVE EITHER IN SESSION OR LOCALSTORAGE
+
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+
+export const useMyData = create(
+  persist(
+    (set) => ({
+      mydata: [],
+      setMyData: (data) => set({ mydata: data }),
+      clearMyData: () => set({ mydata: null }),
+    }),
+    {
+      name: "mydata-storage", // key in storage
+    },
+  ),
+);
+
+
